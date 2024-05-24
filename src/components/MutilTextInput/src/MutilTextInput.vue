@@ -39,6 +39,7 @@ import MultiTextInputItem from './components/MultiTextInputItem.vue'
  */
 export interface MultiTextInputProps {
   values: any // 数据
+  dataKey?: string
   onItemAdded?: (newValue: any, all: any) => any // 添加元素之后的数据响应
   onItemDeleted?: (e: any) => any // 删除元素之后的数据响应
   label?: string // 数据标签
@@ -56,6 +57,8 @@ export interface MultiTextInputProps {
 // 组件props
 const props = withDefaults(defineProps<MultiTextInputProps>(), {
   values: [],
+  dataKey: 'data',
+  idKey: 'id',
   onItemAdded: (newValue: any, all: any) => {
     console.log(newValue, all)
   },
@@ -147,7 +150,9 @@ function handleItemAdd(addedValue: string) {
     return
   }
 
-  valuesRef.value.push(addedValue)
+  let row = {}
+  row[props.dataKey] = addedValue
+  valuesRef.value.push(row)
   setValue('')
   props.onItemAdded(addedValue, valuesRef.value)
 }
