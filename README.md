@@ -1,6 +1,6 @@
 # vue3-mutil-text-input
 
-This template should help get you started developing with Vue 3 in Vite.
+vue多值文本输入
 
 ## Recommended IDE Setup
 
