@@ -24,7 +24,7 @@ export interface ItemProps {
 }
 
 // 组件props的ts定义必须在组件中声明
-const props = withDefaults(defineProps<ItemProps>(), {
+withDefaults(defineProps<ItemProps>(), {
   val: {
     data: 'hi',
   },

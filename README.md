@@ -1,6 +1,8 @@
 # vue3-mutil-text-input
 
-vue多值文本输入
+vue3 多值文本输入。例子：属性的值列表编辑和展示
+
+![例子](./img/demo1.png 'Markdown')
 
 ## Recommended IDE Setup
 

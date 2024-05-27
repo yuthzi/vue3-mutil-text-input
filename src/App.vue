@@ -8,7 +8,7 @@ import MultiTextInputItem from './components/MutilTextInput/src/components/Multi
     <div class="wrapper">
       <MutilTextInput
         name="item-input"
-        :values="[{ data: 'a' }, { data: 'b' }, { data: 'c' }]"
+        :data="[{ data: 'S码' }, { data: 'M码' }, { data: 'L码' }]"
         :label="`尺寸`"
         :placeholder="`输入任意字符，每个元素之间用回车分割`"
       />
@@ -19,11 +19,10 @@ import MultiTextInputItem from './components/MutilTextInput/src/components/Multi
 </template>
 
 <style scoped>
-@media (min-width: 1024px) {
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.wrapper {
+  width: 500px;
+  display: flex;
+  place-items: flex-start;
+  flex-wrap: wrap;
 }
 </style>
